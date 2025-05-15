@@ -1,30 +1,33 @@
 // src/pages/ListadoClientesPage.jsx
 import React from 'react';
+import ana from '../assets/avatars/ana.jpg'
+import carlos from '../assets/avatars/carlos.jpg'
+import kelly from '../assets/avatars/kelly.jpg'
+import laura from '../assets/avatars/laura.jpg'
+import luis from '../assets/avatars/luis.jpg'
+import maria from '../assets/avatars/maria.jpg'
 import WireFrameButton from '../components/FrameButton.jsx';
 
+
 const sampleClients = [
-  { name: "Ana García", summary: "Cliente frecuente, última compra hace 1 semana.", gender: "female" },
-  { name: "Luis Martínez", summary: "Nuevo cliente, primera compra realizada.", gender: "male" },
-  { name: "Carlos Rodríguez", summary: "Cliente VIP, alto volumen de compras.", gender: "male" },
-  { name: "Sofía Hernández", summary: "Interesada en categoría X, contactar.", gender: "female" },
-  { name: "Javier López", summary: "Requiere soporte técnico.", gender: "male" },
-  { name: "Laura Gómez", summary: "Activa desde 2022, cumpleaños próximo.", gender: "female" },
+  { name: "Ana García", summary: "Participa activamente en promociones y eventos especiales." },
+  { name: "Luis Martínez", summary: "Recomendado por amigos, muestra gran interés en nuevos lanzamientos." },
+  { name: "Carlos Rodríguez", summary: "Solicita cotizaciones frecuentes para compras al por mayor." },
+  { name: "Maria Hernández", summary: "Ha dejado comentarios positivos en nuestras redes sociales." },
+  { name: "Kelly López", summary: "Ha reportado problemas con entregas anteriores, pendiente seguimiento." },
+  { name: "Laura Gómez", summary: "Cliente con historial de devoluciones, atención personalizada requerida." },
 ];
 
-const svgAvatarPlaceholder = (width, height, bgColor = '#EFEFEF', borderColor = '#CCC', text = 'Avatar') => {
-  const svgText = text ? `<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="${Math.min(width, height) * 0.3}" fill="#555">${text}</text>` : '';
-  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><rect width="100%" height="100%" fill="${bgColor}" stroke="${borderColor}" stroke-width="1"/><circle cx="50%" cy="50%" r="40%" fill="rgba(0,0,0,0.05)" /><circle cx="50%" cy="35%" r="15%" fill="rgba(0,0,0,0.1)" /><ellipse cx="50%" cy="80%" rx="25%" ry="15%" fill="rgba(0,0,0,0.1)" />${svgText}</svg>`)}`;
-};
-
+const avatarImages = [ana, luis, carlos, maria, kelly, laura];
 
 function ListadoClientes() {
   return (
     <div style={{ padding: '30px 40px' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '30px', marginBottom: '40px', gridTemplateColumns: 'repeat(3, 1fr)' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', marginBottom: '40px' }}>
         {sampleClients.map((clientData, index) => (
           <div key={index} style={{ border: '2px solid black', height: '200px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center', padding: '20px', textAlign: 'center', borderRadius: '10px'}}>
             <img
-              src={`https://xsgames.co/randomusers/avatar.php?g=${clientData.gender}&key=client${index}`}
+              src={avatarImages[index]}
               alt={`Avatar ${clientData.name}`}
               style={{ width: '60px', height: '60px', borderRadius: '50%', objectFit: 'cover', marginBottom: '15px', border: '1px solid #ccc', backgroundColor: '#eee' }}
               loading="lazy"
