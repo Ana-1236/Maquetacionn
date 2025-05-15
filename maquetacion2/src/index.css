@@ -1,68 +1,68 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+/* src/index.css */
+body {
+  margin: 0; /* Quita los márgenes por defecto del navegador */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif; /* Una fuente bonita y común */
+  -webkit-font-smoothing: antialiased; /* Hace que el texto se vea más suave en algunos navegadores */
   -moz-osx-font-smoothing: grayscale;
+  color: #333; /* Color de texto base oscuro */
+  line-height: 1.6; /* Espacio entre líneas de texto para mejor lectura */
+}
+
+/* Estilos para títulos */
+h1, h2, h3, h4, h5, h6 {
+  color: #1a2b3c; /* Un color un poco más oscuro para títulos */
+  margin-top: 1.5em; /* Espacio arriba de los títulos */
+  margin-bottom: 0.5em; /* Espacio debajo de los títulos */
+}
+
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.5em; }
+
+p {
+  margin-bottom: 1em; /* Espacio debajo de los párrafos */
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: #007bff; /* Color azul estándar para enlaces */
+  text-decoration: none; /* Quita el subrayado por defecto */
 }
+
 a:hover {
-  color: #535bf2;
+  text-decoration: underline; /* Subraya al pasar el mouse */
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/* Un estilo básico para botones, lo mejoraremos luego con un componente Button.jsx */
+button, .button-link { /* .button-link es para enlaces que parecen botones */
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover, .button-link:hover {
+  background-color: #0056b3; /* Un azul más oscuro al pasar el mouse */
+}
+
+/* Estilo básico para inputs */
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  width: calc(100% - 22px); /* Ocupa el ancho disponible menos padding y borde */
+  box-sizing: border-box; /* Para que el padding no sume al ancho */
+  margin-bottom: 10px; /* Espacio debajo */
 }
