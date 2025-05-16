@@ -12,29 +12,29 @@ import maria from '../assets/avatars/maria.jpg'
 
 const getClientData = (id) => {
   const baseId = parseInt(id, 10) || 1;
-  const names = ["Ana García", "Luis Martínez", "Carlos Rodríguez", "Sofía Hernández", "Javier López", "Laura Gómez"];
+  const names = ["Ana García", "Luis Martínez", "Carlos Rodríguez", "Maria Hernández", "Kelly López", "Laura Gómez"];
   const genders = ["female", "male", "male", "female", "male", "female"];
-  const emails = ["ana.g@example.com", "luis.m@example.com", "carlos.r@example.com", "sofia.h@example.com", "javier.l@example.com", "laura.g@example.com"];
-  const phones = ["+111222333", "+222333444", "+333444555", "+444555666", "+555666777", "+666777888"];
-  const regDates = ["15/01/2023", "03/03/2023", "21/05/2023", "10/07/2023", "01/09/2023", "18/11/2022"];
+  const emails = ["ana.g45@gmail.com.com", "luism05@gmail.com", "carlos.r89@gmail.com", "maria.h735@gmail.com", "kelly.l475@gmail.com", "laura.g410@gmail.com"];
+  const phones = ["3156845975", "3225789654", "3185974021", "3402597410", "3254012975", "3904782130"];
+  const regDates = ["15/01/2025", "03/03/2025", "21/05/2025", "10/07/2024", "01/09/2024", "18/11/2024"];
   const historyItemsList = [
-    ["Compra: Zapatillas Urbanas X10 - 12/04/2024", "Reclamo: Talla incorrecta - 13/04/2024"],
-    ["Compra: Botas de montaña ProHike - 05/05/2024"],
-    ["Compra: Sandalias verano Flex - 22/03/2024", "Seguimiento: Consulta por nuevos colores - 24/03/2024"],
-    ["Compra: Zapatos de tacón Gala - 01/04/2024"],
-    ["Compra: Zapatillas deportivas RunMax - 15/03/2024", "Revisión: Descuento aplicado incorrectamente - 16/03/2024"],
-    ["Compra: Zapatos casuales ComfortPlus - 18/02/2024", "Compra: Zapatillas escolares - 20/02/2024"]
+    ["Compra: Flauta - 10/05/2025", "Reclamo: Abolladura - 15/05/2025"],
+    ["Compra: Redoblante - 15/05/2025", "Compra: Guitarra - 15/05/2025"],
+    ["Compra: Guitarra electrica - 22/03/2025", "Seguimiento: Consulta por nuevos colores - 24/03/2025"],
+    ["Compra: Acordeon - 01/04/2025"],
+    ["Compra: Congas mini - 15/03/2025", "Revisión: Descuento aplicado incorrectamente - 16/03/2025"],
+    ["Compra: Guitarra eléctrica - 18/02/2025", "Compra: Congas mini - 20/02/2025"]
   ];
   const highlights = [
     "Participa activamente en promociones y eventos especiales.",
-    "Recomendado por amigos, muestra gran interés en nuevos lanzamientos.",
+    "Recomendado por amigos, muestra gran interés en nuevos instrumentos.",
     "Solicita cotizaciones frecuentes para compras al por mayor.",
     "Ha dejado comentarios positivos en nuestras redes sociales.",
     "Ha reportado problemas con entregas anteriores, pendiente seguimiento.",
     "Cliente con historial de devoluciones, atención personalizada requerida."
 
   ];
-  const images = [ana, luis, carlos, laura, maria, kelly];
+  const images = [ana, luis, carlos, maria, kelly, laura];
 
   const index = (baseId - 1 + names.length) % names.length;
 

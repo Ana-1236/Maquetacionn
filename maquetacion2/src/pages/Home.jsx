@@ -35,14 +35,14 @@ function HomePage() {
     <div style={{ padding: '40px 20px', fontFamily: 'Arial, sans-serif' }}>
       {/* Banner */}
       <div style={{
-        background: 'linear-gradient(90deg, #a1c4fd, #c2e9fb)',
+        background: 'linear-gradient(90deg,rgb(208, 161, 253),rgb(251, 194, 194))',
         padding: '60px 20px',
         borderRadius: '12px',
         textAlign: 'center',
         marginBottom: '40px',
         color: '#003366'
       }}>
-        <h1 style={{ fontSize: '2.2em', marginBottom: '10px' }}>Bienvenido a la Plataforma</h1>
+        <h1 style={{ fontSize: '2.2em', marginBottom: '10px' }}>Bienvenido a Music Elements</h1>
         <p>Resumen de la actividad del sistema</p>
       </div>
 
@@ -50,10 +50,10 @@ function HomePage() {
       <div style={{ marginBottom: '40px' }}>
         <h2 style={{ fontSize: '1.5em', marginBottom: '20px' }}>Métricas del Mes</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <MetricCard title="Clientes Activos" value="1,234" icon={<FaUsers />} bg="#e3f2fd" />
-          <MetricCard title="Productos en Stock" value="456" icon={<FaBoxOpen />} bg="#f1f8e9" />
-          <MetricCard title="Ventas del Mes" value="1,890" icon={<FaChartLine />} bg="#fff3e0" />
-          <MetricCard title="Ingresos" value="$25,670" icon={<FaDollarSign />} bg="#fce4ec" />
+          <MetricCard title="Clientes Activos" value="2.000" icon={<FaUsers />} bg="#e3f2fd" />
+          <MetricCard title="Productos en Stock" value="524" icon={<FaBoxOpen />} bg="#f1f8e9" />
+          <MetricCard title="Ventas del Mes" value="2.500" icon={<FaChartLine />} bg="#fff3e0" />
+          <MetricCard title="Ingresos" value="$45.005" icon={<FaDollarSign />} bg="#fce4ec" />
         </div>
       </div>
 
